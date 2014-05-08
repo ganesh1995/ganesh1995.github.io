@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PORTFOLIO</title>
+		
+		
+	<style>
+
+		.image {
+			position: relative;
+			display: inline-block;
+		}
+		
+			.image:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: url('images/overlay.png');
+			}
+		
+
+
+	
+
+		form {
+		}
+		
+			form label {
+				display: block;
+			}
+		
+			form input[type="text"],
+			form input[type="password"],
+			form select,
+			form textarea {
+				display: block;
+				width: 100%;
+				padding: 0.75em;
+				background: none;
+				border: solid 2px rgba(185,186,187,0.25);
+				color: inherit;
+				border-radius: 0.5em;
+				outline: none;
+
+				
+
+				
+			}
+
+				form input[type="text"]:hover,
+				form input[type="password"]:hover,
+				form select:hover,
+				form textarea:hover {
+				}
+
+				form input[type="text"]:focus,
+				form input[type="password"]:focus,
+				form select:focus,
+				form textarea:focus {
+					border-color: #9ac8e9;
+				}
+
+			form input[type="text"],
+			form input[type="password"],
+			form select {
+				line-height: 1em;
+			}
+				
+			form textarea {
+				min-height: 8em;
+			}
+
+			
+
+			form ::-moz-focus-inner {
+				border: 0;
+			}
+			
+	
+	
+	
+
+	
+		
+		.button {
+			background-color: #98c593;
+			border: 0;
+			border-radius: 3.5em;
+			color: #fff;
+			cursor: pointer;
+			display: inline-block;
+			height: 3.5em;
+			line-height: 3.5em;
+			outline: 0;
+			padding: 0 2em 0 2em;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			-o-appearance: none;
+			-ms-appearance: none;
+			appearance: none;
+
+			-
+		}
+
+			.button.down {
+				width: 5em;
+				height: 5em;
+				line-height: 4.5em;
+				padding: 0;
+				background-image: url('images/dark-arrow.svg');
+				background-position: center center;
+				background-repeat: no-repeat;
+				text-indent: -10em;
+				overflow: hidden;
+			}
+			
+				.button.down.anchored {
+					bottom: 0;
+					border-bottom: 0;
+					border-radius: 3em 3em 0 0;
+					height: 4.5em;
+					margin-left: -2.5em;
+				}
+			
+			.button.anchored {
+				position: absolute;
+				left: 50%;
+			}
+			
+			.button:hover {
+				background-color: #a8d5a3;
+			}
+			
+			.button:active {
+				background-color: #88b583;
+			}
+
+			.button.style2 {
+				background-color: transparent;
+				border: solid 2px black;
+				color: inherit;
+			}
+
+				.button.style2:hover {
+					background-color: rgba(145,146,147,0.035);
+				}
+				
+				.button.style2.down {
+					background-image: url('images/arrow.svg');
+				}
+
+	
+
+		.box {
+			background:white;
+			color: #39454b;
+			padding: 2em;
+		}
+		
+			.box.style2 {
+				padding: 3.5em 2.5em 3.5em 0em;
+			}
+			
+
+	
+		
+		.main {
+			position: relative;
+			margin: 0;
+			overflow-x: hidden;
+		}
+		
+			.main.style1 {
+				text-align: center;
+				padding: 10em 0 10em 0;
+			}
+			
+				.main.style1 h2 {
+					font-size: 4.25em;
+					line-height: 1em;
+					letter-spacing: -4px;
+				}
+				
+				.main.style1 .content {
+					opacity: 1.0;
+
+					}
+		
+			.main.style2 {
+				padding: 10em 0 10em 0;
+				overflow: hidden;
+			}
+			
+				.main.style2 .content {
+					position: relative;
+					width: 35%;
+
+					
+				}
+			
+				.main.style2.left {
+				}
+
+					.main.style2.left .content {
+						left: 0;
+					}
+
+				.main.style2.right {
+				}
+
+					.main.style2.right .content {
+						left: 65%;
+					}
+
+				
+		
+			.main.style3 {
+				text-align: center;
+				padding: 6em 0 6em 0;
+			}
+
+				.main.style3 .content {
+				}
+
+					.main.style3 .content > header {
+						margin-bottom: 2em;
+					}
+
+				.main.style3.primary {
+					background: #fff;
+				}
+			
+				.main.style3.secondary {
+					background: #f5f6f7;
+				}
+
+	
+	
+
+
+
+	#header {
+		position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: #fff;
+		background: rgba(255,255,255,0.95);
+		height: 3em;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
+	}
+	
+	body {
+		padding-top: 3em;
+	}
+
+	#logo {
+		position: absolute;
+		left: 1em;
+		top: -1.5em;
+		height: 3em;
+		line-height: 3em;
+		letter-spacing: -1px;
+	}
+	
+		#logo a {
+			font-size: 1.25em;
+		}
+	
+	#nav {
+		position: absolute;
+		right: 0.5em;
+		top: 0;
+		height: 3em;
+		line-height: 3em;
+	}
+
+		#nav ul {
+			margin: 0;
+		}
+
+			#nav ul li {
+				display: inline-block;
+				margin-left: 0.5em;
+				font-size: 0.9em;
+			}
+			
+				#nav ul li a {
+					display: block;
+					color: inherit;
+					text-decoration: none;
+					height: 3em;
+					line-height: 3em;
+					padding: 0 0.5em 0 0.5em;
+					outline: 0;
+				}
+
+
+
+	#intro {
+		background: url('images/intro.jpg');
+		background-size:100% 100%, cover;
+		
+		background-position: top left, bottom center;
+		background-repeat:repeat, no-repeat;
+	}
+
+
+
+	#one {
+		background:  url('images/one.jpg');
+		background-size:100% 100%, cover;
+	
+		background-position: top left, center center;
+	}
+
+
+	#two {
+		background: url('images/two.jpg');
+		background-size:100% 100%, cover;
+		
+		background-position: top left, center center;
+	}
+
+
+			
+
+
+	#contact {
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+	
+		#contact .box {
+			position: relative;
+			bottom: 0;
+			
+			-moz-transition: all 1s ease;
+			-webkit-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			
+			-moz-transform: translateZ(0);
+			-webkit-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			transform: translateZ(0);
+		}
+		
+		#contact.inactive {
+		}
+
+			#contact.inactive .box {
+				bottom: -30em;
+			}
+
+
+	
+	#footer {
+		position: relative;
+		height: 5em;
+		line-height: 5em;
+		margin: 0;
+		background: #39454b;
+		color: #999;
+		color: rgba(185,186,187,0.5);
+		overflow: hidden;
+	}
+
+		#footer a {
+			color: #999;
+			color: rgba(185,186,187,0.5);
+		}
+
+			#footer a:hover {
+				color: #bbb;
+				color: rgba(185,186,187,1.0);
+			}
+	
+		#footer .actions {
+			position: absolute;
+			left: 1em;
+			top: 0.25em;
+			height: 5em;
+			line-height: 5em;
+			margin: 0;
+		}
+		
+			#footer .actions li {
+				font-size: 1.25em;
+				margin: 0;
+			}
+			
+				#footer .actions li a {
+					padding: 0.5em;
+				}
+		
+		#footer .menu {
+			position: absolute;
+			right: 2em;
+			top: 0;
+			height: 5em;
+			line-height: 5em;
+			margin: 0;
+		}
+		
+			#footer .menu li {
+				font-size: 0.9em;
+			}
+
+
+	
+
+
+	</style>
+	</head>
+	<body>
+
+		
+			<header id="header">
+
+				
+					<h1 id="logo">PORTFOLIO</h1>
+				
+				
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro"><big>Intro</big></a></li>
+							<li><a href="#one"><big>My Education</big></a></li>
+							<li><a href="#two"><big>My Skills</big></a></li>
+							<li><a href="#work"><big>About Me</big></a></li>
+							<li><a href="#contact"><big>Contact</big></a></li>
+						</ul>
+					</nav>
+
+			</header>
+			
+		
+			<section id="intro" class="main style1 ">
+				<div class="content container small">
+					<header>
+						<h2>Hey.</h2>
+					</header>
+					<big><p>Myself <strong>Ganeswara Rao</strong> currently pursuing BTech in Mechanical Engineering at IIT Kharagpur</p></big>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+		
+		
+			<section id="one" class="main style2 right ">
+				<div class="content box style2">
+					<header>
+						<h2>My Education</h2>
+					</header>
+					<p>Education is one of the most important aspects in my life.
+					I worked hard during school so that i would be successful when i grew up.
+					I started school at de paul school,ukkunagaram,visakhapatnam.
+					I played an important role in many of my school activities.
+					I secured 95% marks in 10th standard,ICSE.
+					
+					To become an IITian was my dream right from the time i understood what career actually means.
+					I took the necessary coaching and cleared JEE,also securing 97% in 12th IPE board,AP.
+					</p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+		
+		
+		
+			<section id="two" class="main style2 left ">
+				<div class="content box style2">
+					<header>
+						<h2>My Skills</h2>
+					</header>
+					<p>Throughout my experiences so far,i have learned and expanded my knowledge on many different subjects,but where i have learned the most is in computers and technology.
+					At high school i learned Microsoft Paint,Word,Excel,Powerpoint etc.
+					Also i learned core java as a part of my academic curriculum.
+					Starting from here,i have broadened my horizon to C,Oracle ,HTML,CSS,javascript etc in my freetime.</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+			
+		
+			<section id="work" class="main style3 primary">
+				<div class="content container">
+					<header>
+						<h2>About Me</h2>
+						<p>I am a responsible student and hard-working student.
+						I like friendship and get to know about interesting individuals.
+						I like to receive and deal with challenging tasks.
+						I am a very enthusiastic student and a self motivated team player.
+					</p>
+					</header>
+					
+					
+					<img src="images/cricket.jpg">	
+					<img src="images/study.jpg">
+                    <img src="images/tv.jpg">						
+
+				</div>
+			</section>
+			
+		
+			<section id="contact" class="main style3 secondary">
+				<div class="content container">
+					<header>
+						<h2>Say Hello.</h2>
+						<p>You can send your message here.</p>
+					</header>
+					<div class="box1 container small">
+					
+						
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<ul class="actions">
+											<input type="submit" class="button" value="Send Message" />
+										</ul>
+									</div>
+								</div>
+							</form>
+
+					</div>
+				</div>
+			</section>
+			
+		
+			<footer id="footer">
+			
+				
+					
+
+				
+					<ul class="menu">
+					
+						<li>Designed by @ Ganeswara Rao</li>
+					</ul>
+			
+			</footer>
+
+	</body>
+</html>
